@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    h1="Guestbook"
+    p Feel free to leave a message.
+
+    // Wrapper
+    #wrapper
+
+        // USER INFO
+        #userInfo
+            h2 Message Info
+            p
+                strong Name:
+                |  <span id='userInfoName'></span>
+                br              
+                strong Message:
+                |  <span id='userInfoLocation'></span>
+        // /USER INFO
+
+        // Message LIST
+        h2 Message List
+        #msglist
+            table
+                thead
+                    th Name
+                    th Email
+                    th Delete?
+                tbody
+        // /USER LIST
+
+        // Add Message
+        h2 Add Message
+        #addUser
+            fieldset
+                <label for="name">Name: </label>
+                input#inputname(type='text', placeholder='Name')               
+                <label for="uEmail">Email: </label>
+                input#inputUserEmail(type='text', placeholder='Email')
+                br
+                <label for="uMsg">Message</label>
+                br
+                input#inputUsermsg(type='textarea', placeholder='Type your message here...')
+                br
+                button#btnAddUser Add Message
+        // /Add Message
+    // /WRAPPER
